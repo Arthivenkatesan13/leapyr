@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int y=sc.nextInt();
+        boolean l;
+        if(y%4==0){
+            if(y%100==0){
+                if(y%400==0){
+                    l=true;
+                }else{
+                    l=false;
+                }
+            }else{
+                l=true;
+            }
+        }else{
+            l=false;
+        }if(l){
+            System.out.println("The Given Year "+y+" is a Leap Year.");
+        }
+        else{
+            System.out.println("The Given Year " +y+ " is Not a Leap Year.");
+
+        }
+    }
+}
